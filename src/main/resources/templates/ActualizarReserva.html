@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Actualizar Reserva</title>
+</head>
+<body>
+    <h1>Actualizar Reserva</h1>
+    <form action="/reservas/actualizar" method="post">
+        <input type="hidden" th:value="${reserva.reservaID}" name="reservaID"/>
+
+        <label for="nombreCliente">Nombre del Cliente:</label>
+        <input type="text" id="nombreCliente" name="nombreCliente" th:value="${reserva.nombreCliente}" required/><br/>
+
+        <label for="telefonoCliente">Teléfono:</label>
+        <input type="text" id="telefonoCliente" name="telefonoCliente" th:value="${reserva.telefonoCliente}" required/><br/>
+
+        <label for="fechaReserva">Fecha:</label>
+        <input type="date" id="fechaReserva" name="fechaReserva" th:value="${reserva.fechaReserva}" required/><br/>
+
+        <label for="horaReserva">Hora:</label>
+        <input type="time" id="horaReserva" name="horaReserva" th:value="${reserva.horaReserva}" required/><br/>
+
+        <label for="numeroPersonas">Número de Personas:</label>
+        <input type="number" id="numeroPersonas" name="numeroPersonas" th:value="${reserva.numeroPersonas}" required/><br/>
+
+        <label for="comentarios">Comentarios:</label>
+        <textarea id="comentarios" name="comentarios" th:text="${reserva.comentarios}"></textarea><br/>
+
+        <label for="estado">Estado:</label>
+        <input type="text" id="estado" name="estado" th:value="${reserva.estado}" required/><br/>
+
+        <button type="submit">Actualizar Reserva</button>
+    </form>
+    <a href="/reservas">Volver a la lista de reservas</a>
+</body>
+</html>

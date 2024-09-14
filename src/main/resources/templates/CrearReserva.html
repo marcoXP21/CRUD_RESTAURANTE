@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Crear Nueva Reserva</title>
+</head>
+<body>
+    <h1>Crear Nueva Reserva</h1>
+    <form action="/reservas/crear" method="post">
+		
+		<label for="reservaID">ReservaID:</label>
+		<input type="number" id="reservaID" name="reservaID" required/><br/>
+		
+        <label for="nombreCliente">Nombre del Cliente:</label>
+        <input type="text" id="nombreCliente" name="nombreCliente" required/><br/>
+
+        <label for="telefonoCliente">Teléfono:</label>
+        <input type="text" id="telefonoCliente" name="telefonoCliente" required/><br/>
+
+        <label for="fechaReserva">Fecha:</label>
+        <input type="date" id="fechaReserva" name="fechaReserva" required/><br/>
+
+        <label for="horaReserva">Hora:</label>
+        <input type="time" id="horaReserva" name="horaReserva" required/><br/>
+
+        <label for="numeroPersonas">Número de Personas:</label>
+        <input type="number" id="numeroPersonas" name="numeroPersonas" required/><br/>
+
+        <label for="comentarios">Comentarios:</label>
+        <textarea id="comentarios" name="comentarios"></textarea><br/>
+
+        <label for="estado">Estado:</label>
+        <input type="text" id="estado" name="estado" required/><br/>
+
+        <button type="submit">Crear Reserva</button>
+    </form>
+    <a href="/reservas">Volver a la lista de reservas</a>
+</body>
+</html>

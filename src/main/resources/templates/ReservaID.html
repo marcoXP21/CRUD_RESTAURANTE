@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Reservas</title>
+</head>
+<body>
+    <h1>Reservas</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Reserva ID</th>
+                <th>Nombre del Cliente</th>
+                <th>Teléfono</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Número de Personas</th>
+                <th>Comentarios</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="reserva : ${reservas}">
+                <td th:text="${reserva.reservaID}">1</td>
+                <td th:text="${reserva.nombreCliente}">Nombre Cliente</td>
+                <td th:text="${reserva.telefonoCliente}">Teléfono</td>
+                <td th:text="${reserva.fechaReserva}">Fecha</td>
+                <td th:text="${reserva.horaReserva}">Hora</td>
+                <td th:text="${reserva.numeroPersonas}">Número de Personas</td>
+                <td th:text="${reserva.comentarios}">Comentarios</td>
+                <td th:text="${reserva.estado}">Estado</td>
+                <td>
+                
+                </td>
+            </tr>
+        </tbody>
+    </table>
+	<a href="/reservas/crear">Crear Nueva Reserva</a>
+	<a href="/reservas/actualizar">Crear Nueva Reserva</a>
+</body>
+</html>
